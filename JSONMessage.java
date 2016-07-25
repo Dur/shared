@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.codesnippets4all.json.generators.JSONGenerator;
-import com.codesnippets4all.json.generators.JsonGeneratorFactory;
-import com.codesnippets4all.json.parsers.JSONParser;
-import com.codesnippets4all.json.parsers.JsonParserFactory;
+import com.json.generators.JSONGenerator;
+import com.json.generators.JsonGeneratorFactory;
+import com.json.parsers.JSONParser;
+import com.json.parsers.JsonParserFactory;
 
 public class JSONMessage {
 	
@@ -19,6 +19,18 @@ public class JSONMessage {
 	
 	public JSONMessage() {
 		this.messageContent = new HashMap<Object, Object>();
+	}
+	
+	public JSONMessage(Map<Object, Object> params) {
+		this.messageContent = params;
+	}
+	
+	public boolean hasParam(Constants param) {
+		return messageContent.containsKey(param.toString());
+	}
+	
+	public boolean hasParam(MessageTypes param) {
+		return messageContent.containsKey(param.toString());
 	}
 
 	private String toJson(){
@@ -33,6 +45,10 @@ public class JSONMessage {
 	}
 	
 	public Object get(Constants key){
+		return messageContent.get(key.toString());
+	}
+	
+	public Object get(MessageTypes key){
 		return messageContent.get(key.toString());
 	}
 	

@@ -9,5 +9,10 @@ public enum Constants {
 	RECIPIENT_ID, 
 	DISPLAY_NAME, 
 	IP_PORT,
-	MSG_NUM
+	MSG_NUM,
+	POISON_PILL,
+	CHANNEL,
+	PATH,
+	latitude,
+	longitude
 }
