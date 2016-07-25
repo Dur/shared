@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.json.generators.JSONGenerator;
-import com.json.generators.JsonGeneratorFactory;
-import com.json.parsers.JSONParser;
-import com.json.parsers.JsonParserFactory;
+import com.codesnippets4all.json.generators.JSONGenerator;
+import com.codesnippets4all.json.generators.JsonGeneratorFactory;
+import com.codesnippets4all.json.parsers.JSONParser;
+import com.codesnippets4all.json.parsers.JsonParserFactory;
 
 public class JSONMessage {
 	
