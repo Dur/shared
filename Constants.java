@@ -14,5 +14,6 @@ public enum Constants {
 	CHANNEL,
 	PATH,
 	latitude,
-	longitude
+	longitude,
+	SEQUENCE
 }
